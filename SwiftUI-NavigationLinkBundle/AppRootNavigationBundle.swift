@@ -202,3 +202,21 @@ extension UIApplication {
         interactivePopGestureRecognizerDisabled = isDisabled ?? false
     }
 }
+
+
+
+public extension View {
+    
+    /// Helper to create `AnyView` from view
+    var anyView: AnyView {
+        AnyView(self)
+    }
+}
+
+
+
+struct NoTapEffectButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+    }
+}
