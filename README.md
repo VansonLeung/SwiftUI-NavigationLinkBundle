@@ -13,6 +13,10 @@ Usage:
 
 ...
 
+    var body: some View {
+        VStack {
+
+...
 
             Button {
                 _lbObs.openAnyView(
@@ -22,6 +26,11 @@ Usage:
             } label: {
                 Text("Open page 2")
             }
+
+...
+        }
+        .asDetailsView(linkBundleObs: _lbObs)
+    }
 
 
 ```
